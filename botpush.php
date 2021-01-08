@@ -42,12 +42,12 @@
         //   }
         
       // $message = $request_array['type'];
-      $message = "flex";
+      $message = "message";
       // echo $message;
       // die();
       $n = 0;
         if($message == "message"){
-          $arrayPostData['to'] ="U55ebca7c282122cff90fec9bb3062f5a";
+          $arrayPostData['to'] ="U7a6527d93d7a51762128cef70bae1902";
           // $arrayPostData['to'] = $request_array['id'];
           // $arrayPostData['messages'][0]['type'] = "text";
           // $arrayPostData['messages'][0]['text'] = $request_array['text'];
