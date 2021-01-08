@@ -42,7 +42,7 @@
         //   }
         
       // $message = $request_array['type'];
-      $message = "message";
+      $message = "flex";
       // echo $message;
       // die();
       $n = 0;
