@@ -47,7 +47,7 @@
       // die();
       $n = 0;
         if($message == "message"){
-          $arrayPostData['to'] ="1";
+          $arrayPostData['to'] ="U55ebca7c282122cff90fec9bb3062f5a";
           // $arrayPostData['to'] = $request_array['id'];
           // $arrayPostData['messages'][0]['type'] = "text";
           // $arrayPostData['messages'][0]['text'] = $request_array['text'];
