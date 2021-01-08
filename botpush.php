@@ -6,7 +6,7 @@
     ini_set('display_errors', 'On');
   
     // Channel secret - (from https://developers.line.me/console/)
-    $token = 'mFYt9X+aI3AA65GOZ3r+Rc7/CYEmapoKfAp3+AUnrom5THHfd3ouP6K1v6RgxLioZJQQagD+rVmuIqjRuJDRlTIeRPa18X8eHdzyLEpDExAAgqbY1m3yV2RE1YGgcrzC3Dt2/GkdWHKLo4PD65f0SgdB04t89/1O/w1cDnyilFU=';
+    $token = 'CA+wvZz2KlWk2KH0Bspmue+cDiPkCPn2Vkob/rRyoxm8MNsK0GupFEGaf7nnlUIjZJQQagD+rVmuIqjRuJDRlTIeRPa18X8eHdzyLEpDExDpHrgCEoO7CKVAqGitZ2Z33Ws21p27b6GjWX5aGiwf4QdB04t89/1O/w1cDnyilFU=';
     // $token = $_POST['token'];
     
     // Channel access token - (from https://developers.line.me/console/)
@@ -41,14 +41,12 @@
         //     echo "false";
         //   }
         
-      // $message = $request_array['type'];
-      $message = "message";
+      $message = $request_array['type'];
       // echo $message;
       // die();
       $n = 0;
         if($message == "message"){
-          $arrayPostData['to'] ="U7a6527d93d7a51762128cef70bae1902";
-          // $arrayPostData['to'] = $request_array['id'];
+          $arrayPostData['to'] = $request_array['id'];
           // $arrayPostData['messages'][0]['type'] = "text";
           // $arrayPostData['messages'][0]['text'] = $request_array['text'];
           // $arrayPostData['messages'][1]['type'] = "sticker";
@@ -56,23 +54,20 @@
 
           // $arrayPostData['messages'][1]['stickerId'] = "34";z
           $arrayPostData['messages'][0]['type'] = "flex";
-          $arrayPostData['messages'][0]['altText'] = "55555";
-          // $arrayPostData['messages'][0]['altText'] = $request_array['text'];
+          $arrayPostData['messages'][0]['altText'] = $request_array['text'];
           $arrayPostData['messages'][0]['contents']['type'] =  "bubble";
           $arrayPostData['messages'][0]['contents']['direction'] =  "ltr";
           $arrayPostData['messages'][0]['contents']['header']['type'] =  "box";
           $arrayPostData['messages'][0]['contents']['header']['layout'] =  "vertical";
           $arrayPostData['messages'][0]['contents']['header']['contents'][0]['type'] =  "text";
-          $arrayPostData['messages'][0]['contents']['header']['contents'][0]['text'] =  "sss";
-          // $arrayPostData['messages'][0]['contents']['header']['contents'][0]['text'] =  $request_array['text'];
+          $arrayPostData['messages'][0]['contents']['header']['contents'][0]['text'] =  $request_array['text'];
           $arrayPostData['messages'][0]['contents']['header']['contents'][0]['size'] =  "lg";
           $arrayPostData['messages'][0]['contents']['header']['contents'][0]['align'] =  "start";
           $arrayPostData['messages'][0]['contents']['header']['contents'][0]['weight'] =  "bold";
           $arrayPostData['messages'][0]['contents']['header']['contents'][0]['color'] =  "#009813";
 
           $arrayPostData['messages'][0]['contents']['header']['contents'][1]['type'] =  "text";
-          $arrayPostData['messages'][0]['contents']['header']['contents'][1]['text'] =  "100000";
-          // $arrayPostData['messages'][0]['contents']['header']['contents'][1]['text'] =  $request_array['price'];
+          $arrayPostData['messages'][0]['contents']['header']['contents'][1]['text'] =  $request_array['price'];
           $arrayPostData['messages'][0]['contents']['header']['contents'][1]['size'] =  "lg";
           $arrayPostData['messages'][0]['contents']['header']['contents'][1]['weight'] =  "bold";
           $arrayPostData['messages'][0]['contents']['header']['contents'][1]['color'] =  "#000000";
@@ -114,8 +109,7 @@
           $arrayPostData['messages'][0]['contents']['footer']['contents'][0]['color'] =  "#0084B6";
           $arrayPostData['messages'][0]['contents']['footer']['contents'][0]['action']['type'] =  "uri";
           $arrayPostData['messages'][0]['contents']['footer']['contents'][0]['action']['label'] =  "View Detail";
-          // $arrayPostData['messages'][0]['contents']['footer']['contents'][0]['action']['uri'] =  $request_array['base_url'];
-          $arrayPostData['messages'][0]['contents']['footer']['contents'][0]['action']['uri'] =  "http://www.google.com";
+          $arrayPostData['messages'][0]['contents']['footer']['contents'][0]['action']['uri'] =  $request_array['base_url'];
           
           
           // var_dump($arrayPostData);
@@ -178,8 +172,7 @@
       //   ]
       // ];
      $arrayPostData = [
-                        "to" => "U7a6527d93d7a51762128cef70bae1902",
-                        // "to" => $request_array['id'],
+                        "to" => $request_array['id'],
                         "messages" => [
                           [
                             "type" => "flex",
