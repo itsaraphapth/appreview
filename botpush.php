@@ -51,7 +51,7 @@
           // $arrayPostData['messages'][0]['text'] = $request_array['text'];
           // $arrayPostData['messages'][1]['type'] = "sticker";
           // $arrayPostData['messages'][1]['packageId'] = "2";
-
+ 
           // $arrayPostData['messages'][1]['stickerId'] = "34";z
           $arrayPostData['messages'][0]['type'] = "flex";
           $arrayPostData['messages'][0]['altText'] = $request_array['text'];
