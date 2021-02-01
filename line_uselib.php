@@ -28,9 +28,9 @@ error_reporting(E_ALL);
 //require_once("dbconnect.php");
  
 /// ส่วนการกำหนดค่านี้สามารถทำเป็นไฟล์ include แทนได้
-define('LINE_LOGIN_CHANNEL_ID','1655562634');
-define('LINE_LOGIN_CHANNEL_SECRET','b6077850c390243c056d5bd7684d26d5');
-define('LINE_LOGIN_CALLBACK_URL','https://appreviewline.herokuapp.com/login_uselib_callback.php');
+define('LINE_LOGIN_CHANNEL_ID','1655626613');
+define('LINE_LOGIN_CHANNEL_SECRET','32f8f450cfded229022f728eccf0fe02');
+define('LINE_LOGIN_CALLBACK_URL','http://inac.fortiddns.com:9999/line/login_uselib_callback.php');
  
 $LineLogin = new LineLoginLib(
     LINE_LOGIN_CHANNEL_ID, LINE_LOGIN_CHANNEL_SECRET, LINE_LOGIN_CALLBACK_URL);
